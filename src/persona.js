@@ -31,6 +31,9 @@ const STATE_PATH = join(RUNTIME_DIR, 'persona-state.json');
 const MEMORY_PATH = join(RUNTIME_DIR, 'memory.json');
 const LOG_PATH = join(RUNTIME_DIR, 'persona.log');
 
+/** Reported in persona.log so you can tell which build is actually loaded. */
+const VERSION = '0.2.0';
+
 const SILENT_TOKENS = ['<silent>', '<沉默>', '[silent]', '<pass>'];
 const MINUTE = 60 * 1000;
 const DAY = 24 * 60 * MINUTE;
@@ -924,6 +927,8 @@ export async function installPersona({ ctx, bot, sender, manager, config, logger
   }, 'qq-persona.tick');
 
   log('installed', {
+    version: VERSION,
+    scope: loadConfig().memory?.scope ?? 'global',
     profile: PROFILE_DIR,
     peers: Object.keys(store.state.peers).length,
     plans: store.state.plans.length,
