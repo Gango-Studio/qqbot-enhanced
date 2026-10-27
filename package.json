@@ -1,0 +1,50 @@
+{
+  "name": "qqbot-enhanced",
+  "version": "0.2.0",
+  "description": "Human-like chatting, proactive talking and shared long-term memory for the official QQ bot plugin (@tencent-connect/dsh-qqbot) of DeepSeek Harness.",
+  "type": "module",
+  "bin": {
+    "qqbot-enhanced": "./src/install.mjs"
+  },
+  "files": [
+    "src/",
+    "docs/",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "node --test test/",
+    "check": "node src/install.mjs --check"
+  },
+  "engines": {
+    "node": ">=20.3.0"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "qqbot",
+    "qq-bot",
+    "cordis",
+    "plugin",
+    "persona",
+    "memory",
+    "proactive"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gango-Studio/qqbot-enhanced.git"
+  },
+  "homepage": "https://github.com/Gango-Studio/qqbot-enhanced#readme",
+  "bugs": {
+    "url": "https://github.com/Gango-Studio/qqbot-enhanced/issues"
+  },
+  "dsh": {
+    "enhances": "@tencent-connect/dsh-qqbot",
+    "compatibility": {
+      "@tencent-connect/dsh-qqbot": ">=0.5.0"
+    }
+  }
+}

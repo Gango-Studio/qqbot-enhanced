@@ -1,0 +1,38 @@
+{
+  "_readme": "qqbot-enhanced 配置。改完保存即生效（发送相关立即生效，主动说话相关下一轮心跳生效）。所有字段都有内置默认值，删掉也可以。",
+  "enabled": true,
+  "humanize": {
+    "enabled": true,
+    "stripMarkdown": true,
+    "maxBubbles": 3,
+    "signatureEmoji": "",
+    "typingIndicator": true,
+    "baseDelayMs": [500, 1400],
+    "perCharDelayMs": 16,
+    "maxDelayMs": 2600
+  },
+  "proactive": {
+    "enabled": true,
+    "activeHours": [9, 23],
+    "tickMinutes": 5,
+    "minGapMinutes": 90,
+    "maxPerDayPerPeer": 3,
+    "probability": 0.55,
+    "peersTtlDays": 7,
+    "maxPeers": 5,
+    "allowGroups": false
+  },
+  "memory": {
+    "enabled": true,
+    "scope": "global",
+    "owners": [],
+    "autoSummarize": {
+      "enabled": true,
+      "everyTurns": 12,
+      "minGapMinutes": 60
+    }
+  },
+  "persona": {
+    "stylePrompt": ""
+  }
+}
