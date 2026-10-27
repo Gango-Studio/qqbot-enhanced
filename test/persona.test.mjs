@@ -144,11 +144,11 @@ test('lists keep their line breaks inside one bubble', async () => {
 });
 
 test('signature emoji is applied to every bubble when configured', async () => {
-  writeConfig({ humanize: { baseDelayMs: [0, 1], perCharDelayMs: 0, maxDelayMs: 1, signatureEmoji: '🐷' } });
+  writeConfig({ humanize: { baseDelayMs: [0, 1], perCharDelayMs: 0, maxDelayMs: 1, signatureEmoji: '✨' } });
   await new Promise((r) => setTimeout(r, 10));
   const bubbles = await send('今天面试怎么样？我这边刚忙完，有点累。要早点休息哦，别又熬夜到两点');
   assert.ok(bubbles.length >= 2);
-  for (const b of bubbles) assert.ok(b.endsWith('🐷'), `"${b}" should end with the signature`);
+  for (const b of bubbles) assert.ok(b.endsWith('✨'), `"${b}" should end with the signature`);
   writeConfig({});
   await new Promise((r) => setTimeout(r, 10));
 });
@@ -163,7 +163,7 @@ test('memory tools are registered', () => {
 test('shared facts reach both chats, private facts only the private chat', async () => {
   writeConfig({});
   await new Promise((r) => setTimeout(r, 10));
-  await tools.qq_memory_write.execute({ text: '称呼他「猪猪」' }, { agent: agents.c2c });
+  await tools.qq_memory_write.execute({ text: '称呼他「小明」' }, { agent: agents.c2c });
   await tools.qq_memory_write.execute({ text: '他最近在准备面试' }, { agent: agents.group });
   await tools.qq_memory_write.execute({ text: '他私下说最近压力很大', visibility: 'private' }, { agent: agents.c2c });
 
@@ -171,7 +171,7 @@ test('shared facts reach both chats, private facts only the private chat', async
   const group = await assembleFor(agents.group);
   assert.ok(c2c.includes('压力很大'), 'private chat sees private facts');
   assert.ok(!group.includes('压力很大'), 'group never sees private facts');
-  assert.ok(c2c.includes('猪猪') && group.includes('猪猪'), 'shared facts are visible in both');
+  assert.ok(c2c.includes('小明') && group.includes('小明'), 'shared facts are visible in both');
   assert.ok(group.includes('准备面试'), 'facts learned in a group are shared too');
 });
 

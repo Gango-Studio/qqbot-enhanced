@@ -33,14 +33,14 @@
 官方 bot：今天辛苦了。建议早点休息，明天还有……
 增强之后：
   （正在输入…）
-  「咋了，加班到几点🐷」
+  「咋了，加班到几点」
   （正在输入…）
   「先说好，累成这样别硬撑着刷手机」
 ```
 
 ```
 [私聊] 你：我下周三要体检，提醒我别熬夜
-       bot：记住了🐷
+       bot：记住了
 
 [群聊] 你：@bot 我下周有啥事
        bot：下周三体检啊，你这几天不是老熬夜
@@ -125,7 +125,7 @@ npx qqbot-enhanced --restore
 | 字段 | 说明 |
 |---|---|
 | `humanize.maxBubbles` | 一条回复最多拆成几条（受 QQ 单条消息 4 次被动回复额度限制，建议 ≤3） |
-| `humanize.signatureEmoji` | 每个气泡自动补的标志表情，例如 `"🐷"`；留空不补 |
+| `humanize.signatureEmoji` | 每个气泡自动补的标志表情，例如 `"✨"`；留空不补 |
 | `humanize.stripMarkdown` | 去掉标题/列表/加粗/代码块（QQ 上 Markdown 会显示成乱码） |
 | `proactive.activeHours` | 允许主动说话的时段 `[开始, 结束)`，24 小时制 |
 | `proactive.minGapMinutes` | 两次主动说话的最小间隔 |
@@ -176,7 +176,7 @@ npx qqbot-enhanced --restore
 ```json
 {
   "facts": [
-    { "id": "a1b2c3d4", "text": "称呼他「猪猪」", "visibility": "shared", "from": "c2c", "at": 1793100000000 }
+    { "id": "a1b2c3d4", "text": "称呼他「小明」", "visibility": "shared", "from": "c2c", "at": 1793100000000 }
   ]
 }
 ```

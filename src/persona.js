@@ -471,7 +471,7 @@ function splitBubbles(text, max) {
   return out.slice(0, Math.max(1, max));
 }
 
-/** 每条消息都带上人设里的标志表情（避免拆条后只有最后一条有 🐷） */
+/** 每条消息都带上人设里的标志表情（避免拆条后只有最后一条有标志表情） */
 function applySignature(bubbles, emoji) {
   if (!emoji) return bubbles;
   return bubbles.map((b) => (b.includes(emoji) ? b : `${b}${emoji}`));

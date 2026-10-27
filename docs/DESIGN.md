@@ -99,7 +99,7 @@ QQ 用户 ──WS──▶ 官方插件 ──▶ agent.followup() ──▶ DS
 ```json
 {
   "facts": [
-    { "id": "a1b2c3d4", "text": "称呼他「猪猪」", "visibility": "shared", "from": "c2c", "at": 1793100000000 }
+    { "id": "a1b2c3d4", "text": "称呼他「小明」", "visibility": "shared", "from": "c2c", "at": 1793100000000 }
   ],
   "updatedAt": 1793100000000
 }
